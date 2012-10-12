@@ -1,11 +1,13 @@
 Myapp::Application.routes.draw do
   
-  get "users/new"
+  # get "users/new"
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
 
+  resources :users
+  
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
